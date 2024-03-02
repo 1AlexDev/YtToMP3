@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #000435; /* Dark blue background */
+            color: #ffffff; /* White text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            text-align: center; /* Center everything */
+            padding-top: 50px; /* Add space from the top */
+        }
+
+        form {
+            display: flex; /* Use flexbox to center items */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            width: 50%; /* Set width to 50% of the viewport */
+            max-width: 500px; /* Limit maximum width */
+            margin: 0 auto; /* Center the form */
+        }
+
+        label {
+            display: block; /* Display labels on separate lines */
+            margin-bottom: 10px; /* Add space between labels and inputs */
+            font-size: 18px; /* Increase font size */
+        }
+
+        input[type="text"] {
+            width: 100%; /* Set text box width to 100% */
+            padding: 10px; /* Add padding inside text box */
+            border: none; /* No border */
+            border-radius: 10px; /* Round corners */
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            color: #ffffff; /* White text */
+            font-size: 16px; /* Font size */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+            outline: none; /* Remove outline */
+        }
+
+        input[type="submit"] {
+            background-color: #3fb5e8; /* Light blue submit button */
+            color: white; /* White text */
+            padding: 15px 20px; /* Padding */
+            border: none; /* No border */
+            border-radius: 10px; /* Round corners */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Smooth transition */
+            margin-top: 10px; /* Add space between text box and button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3397d5; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    <form id="download-form" action="/download" method="post">
+        <label for="url">Enter YouTube Video URL:</label>
+        <input type="text" id="url" name="url" required>
+        <input type="submit" value="Download">
+    </form>
+</body>
+</html>
